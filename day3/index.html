@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <link
+    href="https://scpic.chinaz.net/files/pic/pic9/202009/apic27858.jpg"
+    rel="icon"
+  />
+  <title></title>
+  <style>
+    /* 初始化 */
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    /* 选择器： . # div  */
+    /* 权重优先级：!important > 行内 > id > class > tag */
+    /* css */
+    /* 什么叫做 盒模型 ie 怪异盒模型，标准盒模型 */
+    /* 标准：width = content */
+    /* 怪异：width = content + padding + border */
+    /* content padding border margin */
+    /* BFC: 格式化上下文 空间塌陷 */
+    .div1 {
+      width: 100px;
+      height: 100px;
+      color: white;
+      box-sizing: border-box;
+      background-color: aqua;
+      /* margin-bottom: 20px; */
+      /* position: relative; 相对于他本来应该在的位置 */
+      /* 根据浏览器（当前页面）绝对*/
+      /* static / relative */
+      /* 脱离文档流 */
+      /* z-index */
+      position: relative;
+    }
+    .div2 {
+      width: 80px;
+      height: 20px;
+      color: white;
+      background-color: red;
+      margin-bottom: 5px;
+      position: absolute;
+    }
+    .div2:nth-child(1) {
+      top: 10px;
+      left: 10px;
+    }
+    .div2:nth-child(2) {
+      top: 40px;
+      left: 10px;
+    }
+    .div2:nth-child(3) {
+      top: 70px;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <div class="div2">456</div>
+    <div class="div2">456</div>
+    <div class="div2">456</div>
+  </div>
+</body>
